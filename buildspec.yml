@@ -8,17 +8,17 @@ phases:
   pre_build:
     commands:
       - echo Restore started on `date`
-      - dotnet restore weathertest/weathertest.csproj
+      - dotnet restore weathertest.csproj
 
   build:
     commands:
       - echo Build started on `date`
-      - dotnet build weathertest/weathertest.csproj
+      - dotnet build weathertest.csproj
 
   post_build:
     commands:
       - echo Publish started on `date`
-      - dotnet publish -c Release -o ./ weathertest/weathertest.csproj
+      - dotnet publish -c Release -o ./ weathertest.csproj
 
 artifacts:
   files:
